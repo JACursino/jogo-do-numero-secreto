@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+
+<head>
+    <!-- 🔊 BIBLIOTECA RESPONSIVEVOICE - Para síntese de voz -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <!-- 🎨 LINK PARA O CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Projeto: Jogo Secreto</title>
+</head>
+
+<body>
+
+    <!-- 📦 CONTAINER PRINCIPAL DO JOGO -->
+    <div class="container">
+        <div class="container__conteudo">
+
+            <!-- 📝 SEÇÃO DE INFORMAÇÕES E ENTRADA -->
+            <div class="container__informacoes">
+
+                <!-- 📄 TEXTOS E INFORMAÇÕES DO JOGO -->
+                <div class="container__texto">
+                    <h1>Adivinhe o <span class="container__texto-azul">numero secreto</span></h1>
+                    <p class="texto__paragrafo">Escolha um número entre 1 a 50</p>
+
+                    <!-- ⏱️ EXIBIÇÃO DO TEMPORIZADOR -->
+                    <p class="texto__paragrafo">Tempo: <span id="temporizador">00:00</span></p>
+
+                    <!-- 🏆 EXIBIÇÃO DO RECORDE ATUAL -->
+                    <p class="texto__paragrafo">Seu Recorde: <span id="recordeAtual">N/A</span></p>
+                </div>
+
+                <!-- ⌨️ INPUT PARA O CHUTE DO USUÁRIO -->
+                <input type="number" min="1" max="50" class="container__input">
+
+                <!-- 🔘 BOTÕES DE AÇÃO -->
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                </div>
+            </div>
+
+            <!-- 🎲 IMAGEM DECORATIVA DOS DADOS -->
+            <img src="./img/dados.png" alt="Um conjunto de três dados transparentes" class="container__imagem-dados" />
+
+            <!-- 🏆 SEÇÃO DO PLACAR TOP 3 -->
+            <div class="container__placar">
+                <h2>🏆 Top 3 Placar</h2>
+                <ul id="placarLista" class="lista__placar">
+                </ul>
+                <button onclick="limparPlacar()" class="container__botao-limpar" title="Limpar todos os recordes">
+                🗑️ Limpar Placar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🔗 SCRIPT DO APLICATIVO -->
+    <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+/* ═══════════════════════════════════════════════════════════════ */
+/* 🎨 DEFINIÇÃO DE VARIÁVEIS CSS - PALETA DE CORES E FONTES */
+/* ═══════════════════════════════════════════════════════════════ */
+
+:root {
+    /* Cores de fundo e degradê */
+    --cor-de-fundo: #01080E;
+    --cor-primaria: #070D48;
+    --cor-secundaria: #000540;
+    --cor-terciaria: #739dff;
+
+    /* Cores gerais */
+    --cor-branca: #FFFFFF;
+    --cor-azul: #38bdf8;
+
+    /* 🆕 CORES ESPECÍFICAS DO JOGO */
+    --cor-azul-botao: #1875E8;
+    --cor-azul-borda: #1875E8;
+    --cor-input-fundo: #FFF;
+    --cor-input-texto: #1875E8;
+    --cor-sombra: rgba(1, 8, 14, 0.15);
+    --cor-borda-container: rgba(255, 255, 255, 0.2);
+    --cor-fundo-placar: rgba(48, 66, 99, 0.322);
+
+    /* Fontes */
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-secundaria: 'Chakra Petch', sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 🎯 RESET E ESTILOS GLOBAIS */
+/* ═══════════════════════════════════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-branca);
+}
+
+body {
+    background:linear-gradient(#3A3D4D 0%, #252936 33.33%, #151A24 66.67%, #0A0C10 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 📦 CONTAINER PRINCIPAL */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid var(--cor-azul-borda);
+    box-shadow: 4px 4px 20px 0px var(--cor-sombra);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container__informacoes {
+    flex-basis: 50%;
+    flex: 1;
+    padding: 3rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 📝 TEXTOS E TIPOGRAFIA */
+/* ═══════════════════════════════════════════════════════════════ */
+
+h1 {
+    font-family: var(--fonte-secundaria);
+    font-size: 72px;
+    padding-bottom: 3rem;
+}
+
+h1 .container__texto-azul {
+    color: var(--cor-azul-botao);
+}
+
+p,
+button {
+    font-family: var(--fonte-principal);
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: var(--cor-azul-botao);
+}
+
+.texto__paragrafo {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ⌨️ INPUT */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: var(--cor-input-fundo);
+    border: none;
+    color: var(--cor-input-texto);
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--fonte-principal);
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 🔘 BOTÕES */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.container__botao {
+    border-radius: 16px;
+    background: var(--cor-azul-botao);
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+.container__botoes {
+    display: flex;
+    gap: 2em;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+.container__botao-limpar {
+    background-color: #1c2fda;
+    color: rgb(38, 135, 199);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.container__botao-limpar:hover {
+    background-color: #204bdab6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.container__botao-limpar:active {
+    transform: scale(0.98);
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 🏆 PLACAR - TOP 10 */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.container__placar {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+
+    width: 200px;
+    max-height: 250px;
+    background-color: var(--cor-fundo-placar);
+    border: 1px solid var(--cor-borda-container);
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--cor-branca);
+    z-index: 10;
+    overflow-y: hidden;
+}
+
+.container__placar h2 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--cor-azul-botao);
+}
+
+.lista__placar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista__placar li {
+    padding: 4px 0;
+    font-size: 0.85em;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+    line-height: 1.4;
+}
+
+.lista__placar li:last-child {
+    border-bottom: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* 📱 MEDIA QUERIES - RESPONSIVIDADE */
+/* ═══════════════════════════════════════════════════════════════ */
+
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .container__botao {
+        font-size: 16px;
+    }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__imagem-dados {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+
+    /* 🆕 Ajuste do placar em telas menores */
+    .container__placar {
+        position: static;
+        width: auto;
+        max-height: none;
+        margin-top: 2rem;
+    }
+}
+
