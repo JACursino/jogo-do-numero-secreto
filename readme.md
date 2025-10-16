@@ -63,13 +63,16 @@ O jogo também registra o **tempo total** e o **número de tentativas**, mantend
 
 ## 📁 Estrutura do Projeto
 
--jogo-secreto/
--├── index.html
--├── style.css
--├── app.js
--├── README.md
--└── img/
---   └── banner.png
+## 📁 Estrutura do Projeto
+```
+jogo-secreto/
+├── index.html
+├── style.css
+├── app.js
+├── README.md
+└── img/
+    └── banner.png
+```
 
 ---
 
