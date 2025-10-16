@@ -22,10 +22,10 @@ Um jogo interativo de adivinhação de números com design moderno, placar de re
 
 ## 📘 Contexto Educacional
 
-Este projeto foi desenvolvido durante minha participação na **Imersão Santander Open Academy e Alura em 2025**.
+Este projeto foi desenvolvido durante minha participação na **Imersão Santander Open Academy em pareceira com a Alura**.
 O jogo foi criado como parte do curso **Lógica de Programação com JavaScript**, ministrado pela [Alura.com.br](https://www.alura.com.br) em **Outubro de 2025**.
 
-**Instrutores:** [Guilherme Lima] e [Monica Hillman]
+**Instrutores:** Guilherme Lima e Monica Hillman
 
 O objetivo foi aplicar fundamentos da lógica de programação e desenvolver uma aplicação web completa com **HTML**, **CSS** e **JavaScript**.
 
