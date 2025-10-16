@@ -63,7 +63,6 @@ O jogo também registra o **tempo total** e o **número de tentativas**, mantend
 
 ## 📁 Estrutura do Projeto
 
-## 📁 Estrutura do Projeto
 ```
 jogo-secreto/
 ├── index.html
@@ -73,7 +72,6 @@ jogo-secreto/
 └── img/
     └── banner.png
 ```
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
