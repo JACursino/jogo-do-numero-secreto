@@ -64,11 +64,12 @@ O jogo também registra o **tempo total** e o **número de tentativas**, mantend
 ## 📁 Estrutura do Projeto
 
 jogo-secreto/
-├── index.html # Estrutura principal da página
-├── style.css # Estilos e design responsivo
-├── app.js # Lógica e funcionalidades do jogo
-└── img/ # Recursos visuais (dados.png, code.png, Ruido.png, banner.png)
-
+├── index.html
+├── style.css
+├── app.js
+├── README.md
+└── img/
+    └── banner.png
 
 ---
 
